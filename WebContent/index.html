@@ -1,0 +1,42 @@
+<html>
+<!-- ****************** -- SCRIPTS -- ****************** -->
+<script src="js/shared/jquery.js"></script>
+<script src="js/shared/bootstrap.js"></script>
+<script src="js/shared/angular.js"></script>
+<script src="js/shared/angular-route.js"></script>
+<script src="js/user/Properties.js"></script>
+<script src="js/user/Application.js"></script>
+<script src="js/user/Controller.js"></script>
+<script src="https://use.fontawesome.com/bf97d561e0.js"></script>
+<!-- ****************** ************* ******************  -->
+<!-- ****************** -- LINKS -- ****************** -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/styling.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Spinnaker" />
+<!-- ****************** *********** ****************** -->
+<body ng-app="App">
+	<!-- <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target="#myNav" data-toggle="collapse">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span> 
+      			</button>
+				<a class="navbar-brand" href="#/">Sean Golden</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNav">
+				<ul class="nav navbar-nav">
+					<li><a href="#/FaceBookTest">FB API Test</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> -->
+	<!-- Don't touch code after this line -->
+	<div class="container-fluid">
+		<div>
+			<div ng-view="myView"></div>
+		</div>
+	</div>
+</body>
+</html>

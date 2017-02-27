@@ -1,0 +1,28 @@
+<!-- This loads the facebook scripts -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1199551250114332',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> 
+
+<h2 class="h2 text-center text-info">FaceBook API Test Page</h2>
+<h3 class="h3 text-center text-danger">{{ testMessage }}</h3>
+
+<div style="margin-top:50px"></div>
+<div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+  	
+</div>
