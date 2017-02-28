@@ -11,6 +11,12 @@
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: Spinnaker;
 }
+a {
+	color: #0059b3;
+}
+a::selection {
+	color: #007acc;
+}
 /***** END FONTS *****/
 /***** STATIC NAVBAR *****/
 /* Background color for the navbar */
@@ -190,6 +196,8 @@ body {
 	padding:0px;
 	margin:0px;
 	background: rgb(82, 86, 89);
+	position: relative;
+	z-index: -10;
 }
 #fullscreen-bg {
 	background-image: url('../img/SDSailing1.jpg');
@@ -204,6 +212,9 @@ body {
 	background-color:#ffcc00;
 	height:100%;
 	padding-top:30px;
+	box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
 }
 .landing-box-modal-right {
 	background-color:#ffcc00;
@@ -224,6 +235,8 @@ body {
 	margin-right:-15px;
 	padding: 0px;
 	box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
 }
 .layer {
 	background-color: rgba(0,89,179,.2);
@@ -235,6 +248,39 @@ body {
 }
 
 /***** END SECTIONS *****/
+/***** FOOTER *****/
+#footer {
+	position: relative;
+	z-index: -99;
+	height: 130px;
+	width: inherit;
+	background: rgb(82, 86, 89);
+}
+.footer-head {
+	position: relative;
+	z-index: 1;
+	height: 30%;
+	width: 100%;
+	margin-left: -5px;
+	margin-right: -5px;
+	background: rgb(82, 86, 89);
+	box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.8);
+	
+}
+.footer-foot {
+	position: relative;
+	padding-top: 10px;
+	z-index: 0;
+	height: 70%;
+	width: 100%;
+	background-color: #ffcc00;
+}
+.quick-nav-div {
+	height: 100%;
+}
+/***** END FOOTER *****/
 /***** PDF *****/
 .pdf-holder {
 	height:98%;
