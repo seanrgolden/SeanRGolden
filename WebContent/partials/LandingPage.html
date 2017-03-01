@@ -32,11 +32,35 @@
 	<div class="container-fluid" id="middle-info">
 		<div class="col-md-6 col-lg-6 col-sm-6 landing-box-modal-left">
 			<h4 class="h4 text-center">Hi, my name is Sean.</h4>
+			<h6 class="h6 text-center">Hovering Photo: {{ isHoveringPhoto }}</h6>
+			<h6 class="h6 text-center">Clicked Arrow: {{ clickedMessage }}</h6>
+			<h6 class="h6 text-center">Current Photo: {{ currentPhoto }}</h6>
 		</div>
-		<div class="col-md-6 col-lg-6 col-sm-6 landing-box-modal-right" id="fullscreen-bg">
-			<div class="layer"></div>
+		<div class="col-md-6 col-lg-6 col-sm-6 landing-box-modal-right" id="fullscreen-bg" 
+			ng-mouseover="hoverOverPhoto()" ng-mouseleave="hoverOutPhoto()">
+			<img class="landing-photo" src="img/SDSailing1.jpg" alt="photo1" ng-if="currentPhoto==1">
+			<img class="landing-photo" src="img/SMCMTack.jpg" alt="photo2" ng-if="currentPhoto==2">
+			<img class="landing-photo" src="img/SeanMeaghHiking.jpg" alt="photo3" ng-if="currentPhoto==3">
+			<img class="landing-photo" src="img/TRNationals16Team.jpg" alt="photo4" ng-if="currentPhoto==4">
+			<div class="layer">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 landing-photo-arrow">
+					<i class="fa fa-arrow-circle-left" ng-if="isHoveringPhoto" ng-click="nextPhoto('left')"></i></div>
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+					<div class="photo-circle-nav-div" ng-if="isHoveringPhoto">
+						<i class="fa fa-circle-o" ng-if="currentPhoto!=1" ng-click="setPhoto(1)"></i>
+						<i class="fa fa-circle" ng-if="currentPhoto==1"></i>
+						<i class="fa fa-circle-o" ng-if="currentPhoto!=2" ng-click="setPhoto(2)"></i>
+						<i class="fa fa-circle" ng-if="currentPhoto==2"></i>
+						<i class="fa fa-circle-o" ng-if="currentPhoto!=3" ng-click="setPhoto(3)"></i>
+						<i class="fa fa-circle" ng-if="currentPhoto==3"></i>
+						<i class="fa fa-circle-o" ng-if="currentPhoto!=4" ng-click="setPhoto(4)"></i>
+						<i class="fa fa-circle" ng-if="currentPhoto==4"></i>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 landing-photo-arrow">
+					<i class="fa fa-arrow-circle-right" ng-if="isHoveringPhoto" ng-click="nextPhoto('right')"></i></div>
+			</div>
 		</div>
 	</div>
-	
 </div>
 

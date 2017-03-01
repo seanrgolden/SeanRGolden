@@ -26,6 +26,9 @@ app.controller('ResumeController', function($scope,$http) {
 app.controller('LandingController', function($document,$scope,$http) {
 	$scope.landingMessage = "Controller is connected!";
 	$scope.navSelected = false;
+	$scope.isHoveringPhoto = false;
+	$scope.currentPhoto = 1;
+	$scope.maxPhoto = 4;
 	
 	$scope.navClicked = function() {
 		if ($scope.navSelected==true) {
@@ -42,6 +45,44 @@ app.controller('LandingController', function($document,$scope,$http) {
 			$scope.navSelected=true;
 		}
 	};
+	
+	$scope.hoverOverPhoto = function() {
+		$scope.isHoveringPhoto = true;
+	};
+	
+	$scope.hoverOutPhoto = function() {
+		$scope.isHoveringPhoto = false;
+	};
+	
+	$scope.nextPhoto = function(direction) {
+		if (direction=="right") {
+			if ($scope.currentPhoto < $scope.maxPhoto) {
+				$scope.currentPhoto += 1;
+				$scope.clickedMessage = "Clicked right";
+			} else if ($scope.currentPhoto == $scope.maxPhoto) {
+				$scope.currentPhoto = 1;
+				$scope.clickedMessage = "Clicked right - but already at last photo - moving to first"
+			}
+		} else if (direction=="left") {
+			if ($scope.currentPhoto > 1) {
+				$scope.currentPhoto -= 1;
+				$scope.clickedMessage = "Clicked left";
+			} else {
+				$scope.currentPhoto = 4;
+				$scope.clickedMessage = "Clicked left - but already at first photo - moving to last"
+			}
+		} else {
+			// should never get here
+		}
+	}
+	
+	$scope.setPhoto = function(photoNum) {
+		if ((photoNum <= $scope.maxPhoto) && (photoNum > 0)) {
+			$scope.currentPhoto = photoNum;
+		} else {
+			// do nothing
+		}
+	}
 
 })
 
