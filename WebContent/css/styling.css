@@ -418,4 +418,8 @@ body {
 	height: 100%;
 	width: 100%;
 }
+.headshot-div {
+	position: center;
+	text-align: center;
+}
 /***** LANDING PAGE *****/
