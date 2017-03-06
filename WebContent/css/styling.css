@@ -1,12 +1,46 @@
 /***** FONTS *****/
+@keyframes landing-header-animation {
+	from {font-size: 24px;}
+	to {font-size: 90px;}
+}
+@-webkit-keyframes landing-header-animation {
+	from {font-size: 24px;}
+	to {font-size: 90px;}
+}
+@keyframes landing-subtitle-animation {
+	0% {margin-top: 100px;}
+	20% {margin-top: 90px;}
+	40% {margin-top: 80px;}
+	60% {margin-top: 75px;}
+	100% {margin-top: 20px;}
+}
+@-webkit-keyframes landing-subtitle-animation {
+	0% {margin-top: 100px;}
+	20% {margin-top: 90px;}
+	40% {margin-top: 80px;}
+	60% {margin-top: 75px;}
+	100% {margin-top: 20px;}
+}
+#gold-shadow-huge {
+	color: #ffcc00; /* gold-ish yellow */
+	text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
+	-webkit-text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
+	-moz-text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
+	font-size: 90px;
+	padding-top: 40px;
+	animation: landing-header-animation 3s ease;
+}
 #gold-shadow {
 	color: #ffcc00; /* gold-ish yellow */
 	text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
 	-webkit-text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
 	-moz-text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
-}
-.text-huge {
-	font-size: 90px;
+	font-size: 24px;
+	margin-top: 20px;
+	animation-name: landing-subtitle-animation;
+	animation-duration: 4s;
+	-webkit-animation-name: landing-subtitle-animation;
+	-webkit-animation-duration: 4s;
 }
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: Spinnaker;
@@ -219,6 +253,7 @@ body {
 }
 .landing-box-modal-right {
 	background-color:#ffcc00;
+	overflow: hidden;
 	height:100%;
 	box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
@@ -245,6 +280,7 @@ body {
 	position: absolute;
     top: 0;
     left: 0;
+    z-index:2;
     padding-left: 20px;
 	padding-right: 30px;
     width: 100%;
@@ -396,7 +432,6 @@ body {
 .photo-circle-nav-div {
 	padding-top: 15px;
 	cursor: pointer;
-	transition: ease-in-out, .3s ease-in-out;
 	text-align: center;
 }
 .fa-circle  {
@@ -416,7 +451,7 @@ body {
 	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.71);
 }
 .landing-photo {
-	position: center center;
+	position: absolute;
 	repeat:  no-repeat;
 	attachment: fit;
 	height: 100%;
@@ -424,5 +459,66 @@ body {
 }
 .headshot-div {
 	text-align: center;
+}
+@keyframes pro-tip-animation {
+	0% {left: -200px;}
+	20% {left: -10px;}
+	80% {left: -10px;}
+	100% {left: -200px;}
+}
+@-webkit-keyframes pro-tip-animation {
+	0% {left: -200px;}
+	20% {left: -10px;}
+	80% {left: -10px;}
+	100% {left: -200px;}
+}
+.pro-tip-box {
+	position: absolute;
+	height: 90px;
+	width: 190px;
+	top: 220px;
+	left: -200;
+	padding-left: 25px;
+	padding-right: 15px;
+	padding-top: 5px;
+	background: #ffcc00;
+	border-radius: 10px;
+	-webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+	animation-name: pro-tip-animation;
+	animation-delay: 5s;
+	animation-duration: 7s;
+	-webkit-animation-name: pro-tip-animation;
+	-webkit-animation-delay: 5s;
+	-webkit-animation-duration: 7s;
+}
+.pro-tip-font-header {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 18px;
+	font-variant: small-caps;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+.pro-tip-font {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 12px;
+	font-style: normal;
+	margin:0;
+}
+@keyframes slide-away-animation  {
+	0% {left:0%; opacity: 1}
+	80% {opacity: 1}
+	100% {left:100%; opacity: 0}
+}
+@-webkit-keyframes slide-away-animation {
+	0% {left:0%; opacity: 1}
+	80% {opacity: 1}
+	100% {left:100%; opacity: 0}
+}
+.landing-photo.ng-hide {
+	animation: slide-away-animation 1s ease-in;
+	-webkit-animation: slide-away-animation 1s ease-in;
+	z-index: 1;
 }
 /***** LANDING PAGE *****/

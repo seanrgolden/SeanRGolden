@@ -58,18 +58,14 @@ app.controller('LandingController', function($document,$scope,$http) {
 		if (direction=="right") {
 			if ($scope.currentPhoto < $scope.maxPhoto) {
 				$scope.currentPhoto += 1;
-				$scope.clickedMessage = "Clicked right";
 			} else if ($scope.currentPhoto == $scope.maxPhoto) {
 				$scope.currentPhoto = 1;
-				$scope.clickedMessage = "Clicked right - but already at last photo - moving to first"
 			}
 		} else if (direction=="left") {
 			if ($scope.currentPhoto > 1) {
 				$scope.currentPhoto -= 1;
-				$scope.clickedMessage = "Clicked left";
 			} else {
 				$scope.currentPhoto = 4;
-				$scope.clickedMessage = "Clicked left - but already at first photo - moving to last"
 			}
 		} else {
 			// should never get here
@@ -105,5 +101,5 @@ app.controller('ContactMeController', function($document,$scope,$http) {
 			$scope.navSelected=true;
 		}
 	};
-
+	
 })
