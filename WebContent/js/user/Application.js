@@ -12,6 +12,9 @@ app.config(function($routeProvider) {
 	}).when("/ContactMePage", {
 		templateUrl: "partials/ContactMePage.html",
 		controller: "ContactMeController"
+	}).when("/ProjectsPage", {
+		templateUrl: "partials/MaintenancePage.html",
+		controller: "MaintenanceController"
 	}).when("/", {
 		templateUrl: "partials/LandingPage.html",
 		controller: "LandingController"

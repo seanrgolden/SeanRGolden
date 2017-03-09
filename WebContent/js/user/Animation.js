@@ -1,3 +1,4 @@
+// Some test animation stuff 
 app.animation('.slide-animation', function() {
 	return {
 		beforeAddClass: function(element, className, done) {
