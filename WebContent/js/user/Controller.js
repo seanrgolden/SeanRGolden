@@ -85,6 +85,7 @@ app.controller('LandingController', function($document,$scope,$http) {
 app.controller('ContactMeController', function($document,$scope,$http) {
 	$scope.contactMessage = "Controller is connected!";
 	$scope.navSelected = false;
+	$scope.isSelected = "nothing";
 	
 	$scope.navClicked = function() {
 		if ($scope.navSelected==true) {
@@ -101,6 +102,46 @@ app.controller('ContactMeController', function($document,$scope,$http) {
 			$scope.navSelected=true;
 		}
 	};
+	
+	var activeClass = "contact-bubble-active";
+	var inactiveClass = "contact-bubble";
+	$scope.emailBubble = inactiveClass;
+	$scope.linkedinBubble = inactiveClass;
+	$scope.callBubble = inactiveClass;
+	$scope.formBubble = inactiveClass;
+	$scope.setActiveContact = function(activeBubble) {
+		if (activeBubble=='email') {
+			$scope.isSelected = "email";
+			$scope.emailBubble = activeClass;
+			$scope.linkedinBubble = inactiveClass;
+			$scope.callBubble = inactiveClass;
+			$scope.formBubble = inactiveClass;
+			
+		} else if (activeBubble=='linkedin') {
+			$scope.isSelected = "linkedin";
+			$scope.emailBubble = inactiveClass;
+			$scope.linkedinBubble = activeClass;
+			$scope.callBubble = inactiveClass;
+			$scope.formBubble = inactiveClass;
+			
+		} else if (activeBubble=='call') {
+			$scope.isSelected = "call";
+			$scope.emailBubble = inactiveClass;
+			$scope.linkedinBubble = inactiveClass;
+			$scope.callBubble = activeClass;
+			$scope.formBubble = inactiveClass;
+			
+		} else if (activeBubble=='form') {
+			$scope.isSelected = "form";
+			$scope.emailBubble = inactiveClass;
+			$scope.linkedinBubble = inactiveClass;
+			$scope.callBubble = inactiveClass;
+			$scope.formBubble = activeClass;
+			
+		} else {
+			$scope.isSelected = "nothing";
+		}
+	}
 	
 })
 
