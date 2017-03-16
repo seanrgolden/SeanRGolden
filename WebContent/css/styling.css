@@ -228,8 +228,7 @@ body {
 	z-index: -10;
 }
 #fullscreen-bg {
-/* 	background-image: url('../img/SDSailing1.jpg');
- */	background-position: center center;
+	background-position: center center;
 	background-repeat:  no-repeat;
 	background-attachment: fit;
 	background-size:  cover;
@@ -240,7 +239,7 @@ body {
 .landing-box-modal-left {
 	background-color:#ffcc00;
 	height:100%;
-	padding-top:30px;
+	padding: 30px 50px;
 	box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
     -moz-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.8);
@@ -280,7 +279,21 @@ body {
     width: 100%;
     height: 100%;
 }
-
+.autoplay-button {
+	cursor: pointer;
+	position: relative;
+	top: 80%;
+	left: 0;
+	margin: 10px;
+	height: 20px;
+	width: 20px;
+	z-index: 3;
+}
+.fa-play,
+.fa-pause {
+	color: white;
+	font-size: 16px;
+}
 /***** END SECTIONS *****/
 /***** FOOTER *****/
 #footer {
@@ -518,8 +531,8 @@ body {
 	100% {left:100%; opacity: 0}
 }
 .landing-photo.ng-hide {
-	animation: slide-away-animation 1s ease-in;
-	-webkit-animation: slide-away-animation 1s ease-in;
+	animation: slide-away-animation 1s cubic-bezier(.62,.14,.84,.86);
+	-webkit-animation: slide-away-animation 1s cubic-bezier(.62,.14,.84,.86);
 	z-index: 1;
 }
 /***** LANDING PAGE *****/

@@ -23,7 +23,7 @@ app.controller('ResumeController', function($scope,$http) {
 	};
 })
 
-app.controller('LandingController', function($document,$scope,$http) {
+app.controller('LandingController', function($document,$scope,$http,$interval) {
 	$scope.landingMessage = "Controller is connected!";
 	$scope.navSelected = false;
 	$scope.isHoveringPhoto = false;
@@ -71,6 +71,31 @@ app.controller('LandingController', function($document,$scope,$http) {
 			// should never get here
 		}
 	}
+	
+	var promise;
+	$scope.autoPlayOn = false;
+	$scope.startAutoPlay = function() {
+		$scope.stopAutoPlay();
+		
+		$scope.autoPlayOn = true;
+		
+		promise = $interval(function() {
+			if ($scope.currentPhoto < 4) {
+				$scope.currentPhoto += 1;
+			} else {
+				$scope.currentPhoto = 1;
+			}
+		}, 15000);
+	}
+	
+	$scope.stopAutoPlay = function() {
+		$scope.autoPlayOn = false;
+		$interval.cancel(promise);
+	}
+	
+	$scope.$on('$destroy', function() {
+		$scope.stop();
+	});
 	
 	$scope.setPhoto = function(photoNum) {
 		if ((photoNum <= $scope.maxPhoto) && (photoNum > 0)) {
