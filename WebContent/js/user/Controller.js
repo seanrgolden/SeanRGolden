@@ -1,4 +1,4 @@
-app.controller('FaceBookTestController', function($scope,$http) {
+app.controller('WebTestController', function($scope,$http) {
 	$scope.testMessage = "Controller is connected!";
 })
 

@@ -3,9 +3,9 @@ var app=angular.module("App",['ngRoute', 'ngAnimate']);
 var URI = getURI();
 
 app.config(function($routeProvider) {
-	$routeProvider.when("/FaceBookTest", {
-		templateUrl: "partials/FaceBookTest.html",
-		controller: "FaceBookTestController"
+	$routeProvider.when("/WebTest", {
+		templateUrl: "partials/WebTest.html",
+		controller: "WebTestController"
 	}).when("/ResumePage", {
 		templateUrl: "partials/ResumePage.html",
 		controller: "ResumeController"
