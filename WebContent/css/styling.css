@@ -334,6 +334,30 @@ body {
 }
 /***** END PDF *****/
 /***** LANDING PAGE *****/
+@media only screen and (min-width: 1162px) and (max-width: 1280px) {
+	.landing-text-header {
+		font-size: 18px;
+	}
+	.landing-text {
+		font-size: 14px;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1161px) {
+	.landing-text-header {
+		font-size: 16px;
+	}
+	.landing-text {
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width: 801px) and (max-width: 991px) {
+	.landing-text-header {
+		font-size: 20px;
+	}
+	.landing-text {
+		font-size: 16px;
+	}
+}
 .title-box {
 	padding: 20px 10px;
 	background-color: rgba(51,153,255, .8);

@@ -55,6 +55,10 @@ app.controller('LandingController', function($document,$scope,$http,$interval) {
 	};
 	
 	$scope.nextPhoto = function(direction) {
+		var wasOn = $scope.autoPlayOn;
+		if (wasOn) {
+			$scope.stopAutoPlay();
+		}
 		if (direction=="right") {
 			if ($scope.currentPhoto < $scope.maxPhoto) {
 				$scope.currentPhoto += 1;
@@ -69,6 +73,9 @@ app.controller('LandingController', function($document,$scope,$http,$interval) {
 			}
 		} else {
 			// should never get here
+		}
+		if (wasOn) {
+			$scope.startAutoPlay();
 		}
 	}
 	
@@ -98,10 +105,17 @@ app.controller('LandingController', function($document,$scope,$http,$interval) {
 	});
 	
 	$scope.setPhoto = function(photoNum) {
+		var wasOn = $scope.autoPlayOn;
+		if (wasOn) {
+			$scope.stopAutoPlay();
+		}
 		if ((photoNum <= $scope.maxPhoto) && (photoNum > 0)) {
 			$scope.currentPhoto = photoNum;
 		} else {
 			// do nothing
+		}
+		if (wasOn) {
+			$scope.startAutoPlay();
 		}
 	}
 
