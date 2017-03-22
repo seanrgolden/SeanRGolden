@@ -1,1 +1,40 @@
-<h1 class="h1 text-center text-info">WebTest</h1>
+<!-- <div style="background: white;">
+	<p class="text-center text-info" ng-repeat="project in projectsList">{{project.Project}}</p>
+</div> -->
+<div class="choose-filter-div" ng-hide="filterSelection!='none'">
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 choose-domain-div" ng-click="setChoice('domain')">
+		<div class="choose-domain-overlay">
+			<div class="domain-text-div">
+				<h2 class="h2 text-center domain-text">View Projects By Domain</h2>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 choose-tech-div" ng-click="setChoice('tech')">
+		<div class="choose-tech-overlay">
+			<div class="tech-text-div">
+				<h2 class="h2 text-center tech-text">View Projects By Technology</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-hide="filterSelection!='tech'" class="tech-map-div">
+	TECH
+	<p ng-click="setChoice('none')">BACK</p>
+</div>
+<div ng-hide="filterSelection!='domain'" class="domain-map-div">
+	<div class="domain-back-button" ng-click="setChoice('none')">
+		<h2 class="h2"><i class="fa fa-arrow-left"></i> Back</h2>
+	</div>
+	<div class="domain-selection-div" ng-hide="selectedDomain!='none'">
+		<div class="domain-domain-header-div">
+			<h2 class="h2 text-center domain-domain-header-text">Select a Domain to view Projects</h2>		
+		</div>
+		<div ng-repeat="domain in domainsList" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 domain-domainBubble"
+			ng-click="setDomain(domain.Name)">
+			<p class="domain-domainBubble-text text-center">{{ domain.Name }}</p>
+		</div>
+	</div>
+	<div class="domain-selectedDomain-div" ng-hide="selectedDomain=='none'">
+		{{ selectedDomain }}
+	</div>
+</div>

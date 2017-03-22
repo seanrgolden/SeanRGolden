@@ -1,5 +1,31 @@
 app.controller('WebTestController', function($scope,$http) {
 	$scope.testMessage = "Controller is connected!";
+	$scope.projectsList = null;
+	$scope.domainsList, $scope.numDomains = null;
+	$scope.selectedDomain = 'none';
+	
+	$.getJSON('js/user/ProjectList.json', function(data) {
+		$scope.$apply(function() {
+			$scope.projectsList = data;
+		});
+	});
+	
+	$.getJSON('js/user/Domains.json', function(data) {
+		$scope.$apply(function() {
+			$scope.domainsList = data;
+			$scope.numDomains = $scope.domainsList.length;
+		});
+	});
+	
+	$scope.filterSelection = 'none';
+	$scope.setChoice = function(choice) {
+		$scope.filterSelection = choice;
+		$scope.selectedDomain = 'none';
+	}
+	$scope.setDomain = function(domain) {
+		$scope.selectedDomain = domain;
+	}
+	
 })
 
 app.controller('ResumeController', function($scope,$http) {

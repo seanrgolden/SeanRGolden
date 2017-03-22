@@ -736,4 +736,209 @@ body {
 	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
 }
 /***** END CONTACT ME PAGE *****/
+/***** PROJECTS WEB *****/
+@keyframes fade-out  {
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@-webkit-keyframes fade-out {
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@keyframes fade-in  {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+@-webkit-keyframes fade-in {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+.choose-filter-div {
+	padding: 0px;
+	height: 100vh;
+	width: 100vw;
+	background: white;
+	margin-left: -15px;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	-webkit-animation-name: fade-in;
+	-webkit-animation-duration: 1s;
+}
+.choose-filter-div.ng-hide {
+	animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+	-webkit-animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+	z-index: 1;
+}
+.choose-domain-div {
+	display: inline-block;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/DomainCloud.svg');
+	background-position: center;
+}
+.choose-domain-overlay {
+	cursor: pointer;
+	color: rgba(255,255,255,0.95);
+	background-color: rgba(255, 204, 0, 0.95);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	transition: .3s ease-in;
+}
+.choose-domain-overlay:hover {
+	background-color: rgba(255, 204, 0, 0.4);
+	transition: .3s ease-in;
+}
+.choose-tech-div {
+	display: inline-block;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/TechCloud.svg');
+	background-position: center;
+}
+.choose-tech-overlay {
+	cursor: pointer;
+	color: rgba(255,255,255,0.95);
+	background-color: rgba(0, 89, 179, 0.85);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	transition: .3s ease-in;
+}
+.choose-tech-overlay:hover {
+	background-color: rgba(0, 89, 179, 0.3);
+	transition: .3s ease-in;
+}
+.choose-text-div {
+	position: fixed;
+	overflow: hidden;
+	z-index: 5;
+	left: 30vw;
+	height: 15vh;
+	width: 40vw;
+	background: transparent;
+	border: 2px solid red;
+}
+.choose-header {
+	color: white;
+	-webkit-text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+	-moz-text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+	text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+}
+.domain-text-div {
+	width: 40vw;
+	overflow: hidden;
+	margin: 0 auto;
+	background: transparent;
+}
+.tech-text-div {
+	width: 40vw;
+	overflow: hidden;
+	margin: 0 auto;
+	background: transparent;
+}
+.tech-map-div {
+	padding: 0px;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(82, 86, 89);
+	margin-left: -15px;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	-webkit-animation-name: fade-in;
+	-webkit-animation-duration: 1s;
+}
+.tech-map-div.ng-hide {
+	animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+	-webkit-animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+}
+.domain-map-div {
+	padding: 0px;
+	height: 100vh;
+	width: 100vw;
+	background: rgb(82, 86, 89);
+	margin-left: -15px;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	-webkit-animation-name: fade-in;
+	-webkit-animation-duration: 1s;
+}
+.domain-map-div.ng-hide {
+	animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+	-webkit-animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
+}
+.domain-selection-div {
+	height: 100%;
+	width: 100%;
+	padding: 5vh 10vw;
+}
+.domain-back-button {
+	cursor: pointer;
+	position: fixed;
+	height: 10vh;
+	width: 130px;
+	color: white;
+	top: 0;
+	left: 0;
+}
+.domain-domainBubble {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	height: 13vh;
+	width: 12vw;
+	margin: 2vh 2vw;
+	border-radius: 6vw / 7.5vh;
+	-webkit-border-radius: 6vw / 7.5vh;
+	background: #0059b3;
+	color: white;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	transition: ease-in-out, .5s ease-in-out;
+}
+.domain-domainBubble:hover {
+	background: #ffcc00;
+	color: #0059b3;
+	transition: ease-in-out, .5s ease-in-out;
+}
+.domain-domainBubble-text {
+	margin-top: 25px;
+}
+.domain-domain-header-div {
+	height: 20vh;
+	width: 60vw;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.domain-domain-header-text {
+	color: white;
+}
+.domain-selectedDomain-div {
+	height: 80vh;
+	width: 80vw;
+	border-radius: 38vw / 38vh;
+	margin: 10vh auto;
+	background: #ffcc00;
+	opacity: 1;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+}
+.domain-selectedDomain-div.ng-hide {
+	opacity: 0;
+}
+/* out of scope */
+.domain-selectedDomain-div.ng-hide-add {
+	transition: all ease-in 5s;
+}
+/* Into Scope */
+.domain-selectedDomain-div.ng-hide-remove {
+	transition: all ease-in 1s;
+}
+/***** END PROJECTS WEB *****/
+
 
