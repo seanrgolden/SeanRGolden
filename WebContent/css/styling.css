@@ -860,11 +860,11 @@ body {
 } 
 .domain-back-button {
 	cursor: pointer;
-	position: fixed;
+	position: absolute;
 	height: 10vh;
-	width: 130px;
+	width: 330px;
 	color: white;
-	bottom: 0;
+	bottom: 20vh;
 	left: 5vw;
 }
 .domain-domainBubble {
@@ -927,15 +927,17 @@ body {
 	cursor: pointer;
 }
 .project-holder {
+	overflow: scroll;
 	margin: 0 auto;
 	height: 75%;
-	width: 80%;
+	width: 60%;
+	padding: 0;
 }
 .project-line {
 	cursor: pointer;
 	min-height: 10%;
 	max-height: 12%;
-	width: 60%;
+	width: 90%;
 	background: #0059b3;
 	padding: 5px 10px;
 	color: white;
@@ -996,6 +998,28 @@ body {
 		font-size: 8px;
 		font-family: Spinnaker;
 	}
+}
+.tech-techBubble {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	height: 10vh;
+	width: 9vw;
+	margin: 2vh 2vw;
+	border-radius: 4.5vw / 5vh;
+	-webkit-border-radius: 4.5vw / 5vh;
+	background: #0059b3;
+	color: white;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	transition: ease-in-out, .5s ease-in-out;
+}
+.tech-techBubble:hover {
+	background: #ffcc00;
+	color: #0059b3;
+	transition: ease-in-out, .5s ease-in-out;
 }
 /* 
 .domain-selectedDomain-div.ng-hide-add {

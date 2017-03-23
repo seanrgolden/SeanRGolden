@@ -18,12 +18,55 @@
 	</div>
 </div>
 <div ng-hide="filterSelection!='tech'" class="tech-map-div">
-	TECH
-	<p ng-click="setChoice('none')">BACK</p>
+	<div class="domain-back-button" ng-click="setChoice('none')" ng-hide="selectedTech!='none'">
+		<h2 class="h2"><i class="fa fa-arrow-left"></i> Back to Home</h2>
+	</div>
+	<div class="domain-selection-div" ng-hide="selectedTech!='none'">
+		<div class="domain-domain-header-div">
+			<h2 class="h2 text-center domain-domain-header-text">Select a Technology to view Projects</h2>		
+		</div>
+		<div ng-repeat="tech in techList" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 tech-techBubble"
+			ng-click="setTech(tech)">
+			<p class="domain-domainBubble-text text-center">{{ tech.Name }}</p>
+		</div>
+	</div>
+	<div class="domain-selectedDomain-div" ng-hide="selectedTech=='none'">
+		<div ng-hide="selectedProject!=null">
+			<div class="selectedDomain-domain-header-div">
+				<h3 class="h3 text-center selectedDomain-domain-header-text" style="margin-top: 30px;">
+					My {{ selectedTech.Name }} Projects</h3>
+			</div>
+			<div class="project-holder">
+				<div ng-repeat="project in projectsList" ng-hide="!project.Tech.includes(selectedTech.Name)" 
+					class="project-line" ng-click="setProject(project)">
+						<p class="text-center project-line-text">{{ project.Project }}</p>
+				</div>
+			</div>
+			<div class="domain-back-text-div" ng-click="setTech('none')">
+					<h4 class="h4 text-center selectedDomain-domain-header-text">
+						<i class="fa fa-arrow-left"></i> Back to Technology List</h4>
+			</div>
+		</div>
+		<div ng-hide="selectedProject==null" class="project-detail-div">
+			<h3 class="h3 text-center project-detail-title">{{ selectedProject.Project }}</h3>
+			<div class="project-detail-text-div">
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Domain:</b>     {{ selectedProject.Domain }}</h5>
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Technology Used:</b>     {{ selectedProject.Tech }}</h5>
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Description:</b>     {{ selectedProject.Description }}</h5>
+			</div>
+			<div class="domain-back-text-div" ng-click="setProject(null)">
+				<h4 class="h4 text-center selectedDomain-domain-header-text">
+					<i class="fa fa-arrow-left"></i> Back to Projects List</h4>
+			</div>
+		</div>
+	</div>
 </div>
 <div ng-hide="filterSelection!='domain'" class="domain-map-div">
-	<div class="domain-back-button" ng-click="setChoice('none')">
-		<h2 class="h2"><i class="fa fa-arrow-left"></i> Back</h2>
+	<div class="domain-back-button" ng-click="setChoice('none')" ng-hide="selectedDomain!='none'">
+		<h2 class="h2"><i class="fa fa-arrow-left"></i> Back to Home</h2>
 	</div>
 	<div class="domain-selection-div" ng-hide="selectedDomain!='none'">
 		<div class="domain-domain-header-div">
