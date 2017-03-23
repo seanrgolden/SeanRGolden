@@ -845,14 +845,6 @@ body {
 	width: 100vw;
 	background: rgb(82, 86, 89);
 	margin-left: -15px;
-	animation-name: fade-in;
-	animation-duration: 1s;
-	-webkit-animation-name: fade-in;
-	-webkit-animation-duration: 1s;
-}
-.tech-map-div.ng-hide {
-	animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
-	-webkit-animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
 }
 .domain-map-div {
 	padding: 0px;
@@ -860,28 +852,20 @@ body {
 	width: 100vw;
 	background: rgb(82, 86, 89);
 	margin-left: -15px;
-	animation-name: fade-in;
-	animation-duration: 1s;
-	-webkit-animation-name: fade-in;
-	-webkit-animation-duration: 1s;
-}
-.domain-map-div.ng-hide {
-	animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
-	-webkit-animation: fade-out 1s cubic-bezier(.62,.14,.84,.86);
 }
 .domain-selection-div {
 	height: 100%;
 	width: 100%;
 	padding: 5vh 10vw;
-}
+} 
 .domain-back-button {
 	cursor: pointer;
 	position: fixed;
 	height: 10vh;
 	width: 130px;
 	color: white;
-	top: 0;
-	left: 0;
+	bottom: 0;
+	left: 5vw;
 }
 .domain-domainBubble {
 	cursor: pointer;
@@ -917,6 +901,15 @@ body {
 .domain-domain-header-text {
 	color: white;
 }
+.selectedDomain-domain-header-div {
+	height: 10vh;
+	width: 60vw;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.selectedDomain-domain-header-text {
+	color: #0059b3;
+}
 .domain-selectedDomain-div {
 	height: 80vh;
 	width: 80vw;
@@ -928,17 +921,118 @@ body {
 	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
 	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
 }
-.domain-selectedDomain-div.ng-hide {
+.domain-back-text-div {
+	margin: 0 auto;
+	position: relative;
+	cursor: pointer;
+}
+.project-holder {
+	margin: 0 auto;
+	height: 75%;
+	width: 80%;
+}
+.project-line {
+	cursor: pointer;
+	min-height: 10%;
+	max-height: 12%;
+	width: 60%;
+	background: #0059b3;
+	padding: 5px 10px;
+	color: white;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	margin: 2vh auto;
+	transition: ease-in-out, .5s ease-in-out;
+}
+.project-line:hover {
+	background: #ffcc00;
+	color: #0059b3;
+	transition: ease-in-out, .5s ease-in-out;
+}
+.project-line-text {
+	font-size: 15px;
+	font-family: Spinnaker;
+}
+.project-detail-div {
+	margin: 0 auto;
+	height: 100%;
+	width: 70%;
+	padding-top: 10%;
+}
+.project-detail-title {
+	font-weight: bold;
+	color: #004080;
+}
+.project-detail-text-title {
+	font-weight: bold;
+	color: #004080;
+}
+.project-detail-text-div {
+	margin-top: 5%;
+	height: 50%;
+	padding: 5px 10%;
+}
+@media only screen and (max-width : 1200px) {
+	.project-line-text {
+		font-size: 13px;
+		font-family: Spinnaker;
+	}
+}
+@media only screen and (max-width : 992px) {
+	.project-line-text {
+		font-size: 11px;
+		font-family: Spinnaker;
+	}
+}
+@media only screen and (max-width : 768px) {
+	.project-line-text {
+		font-size: 10px;
+		font-family: Spinnaker;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.project-line-text {
+		font-size: 8px;
+		font-family: Spinnaker;
+	}
+}
+/* 
+.domain-selectedDomain-div.ng-hide-add {
+	transition: 1s;
+	opacity: 1;
+}
+.domain-selectedDomain-div.ng-hide-add.ng-hide-add-active {
 	opacity: 0;
 }
-/* out of scope */
-.domain-selectedDomain-div.ng-hide-add {
-	transition: all ease-in 5s;
-}
-/* Into Scope */
 .domain-selectedDomain-div.ng-hide-remove {
-	transition: all ease-in 1s;
+	display:block!important;
+	position: absolute;
+	transition: all ease-in 2s;
+	transform-origin: center center;
+	height: 13vh;
+	width: 12vw;
+	margin: 2vh 2vw;
+	border-radius: 6vw / 7.5vh;
+	-webkit-border-radius: 6vw / 7.5vh;
+	background: #0059b3;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
 }
+.domain-selectedDomain-div.ng-hide-remove.ng-hide-remove-active {
+	height: 80vh;
+	width: 80vw;
+	position: relative;
+	top: 0;
+	left: 0;
+	border-radius: 38vw / 38vh;
+	margin: 10vh auto;
+	background: #ffcc00;
+	-webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8);
+} */
 /***** END PROJECTS WEB *****/
 
 

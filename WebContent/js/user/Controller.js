@@ -1,8 +1,12 @@
 app.controller('WebTestController', function($scope,$http) {
 	$scope.testMessage = "Controller is connected!";
 	$scope.projectsList = null;
-	$scope.domainsList, $scope.numDomains = null;
+	$scope.domainsList, $scope.filteredDomains, $scope.numDomains = null;
+	$scope.techList, $scope.filteredTech, $scope.numTech = null;
+	$scope.filteredProjects = null;
 	$scope.selectedDomain = 'none';
+	$scope.selectedTech = 'none';
+	$scope.selectedProject = null;
 	
 	$.getJSON('js/user/ProjectList.json', function(data) {
 		$scope.$apply(function() {
@@ -17,15 +21,31 @@ app.controller('WebTestController', function($scope,$http) {
 		});
 	});
 	
+	$.getJSON('js/user/Tech.json', function(data) {
+		$scope.$apply(function() {
+			$scope.techList = data;
+			$scope.numTech = $scope.techList.length;
+		});
+	});
+	
 	$scope.filterSelection = 'none';
 	$scope.setChoice = function(choice) {
 		$scope.filterSelection = choice;
 		$scope.selectedDomain = 'none';
+		$scope.selectedTech = 'none';
+		$scope.selectedProject = null;
+		$scope.filteredTech, $scope.filteredDomains = null;
+		$scope.filteredProjects = null;
 	}
 	$scope.setDomain = function(domain) {
 		$scope.selectedDomain = domain;
 	}
-	
+	$scope.setTech = function(tech) {
+		$scope.selectedTech = tech;
+	}
+	$scope.setProject = function(project) {
+		$scope.selectedProject = project;
+	}
 })
 
 app.controller('ResumeController', function($scope,$http) {

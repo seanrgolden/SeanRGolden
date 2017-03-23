@@ -35,6 +35,36 @@
 		</div>
 	</div>
 	<div class="domain-selectedDomain-div" ng-hide="selectedDomain=='none'">
-		{{ selectedDomain }}
+		<div ng-hide="selectedProject!=null">
+			<div class="selectedDomain-domain-header-div">
+				<h3 class="h3 text-center selectedDomain-domain-header-text" style="margin-top: 30px;">
+					My {{ selectedDomain }} Projects</h3>
+			</div>
+			<div class="project-holder">
+				<div ng-repeat="project in projectsList" ng-hide="project.Domain!=selectedDomain" 
+					class="project-line" ng-click="setProject(project)">
+						<p class="text-center project-line-text">{{ project.Project }}</p>
+				</div>
+			</div>
+			<div class="domain-back-text-div" ng-click="setDomain('none')">
+					<h4 class="h4 text-center selectedDomain-domain-header-text">
+						<i class="fa fa-arrow-left"></i> Back to Domain List</h4>
+			</div>
+		</div>
+		<div ng-hide="selectedProject==null" class="project-detail-div">
+			<h3 class="h3 text-center project-detail-title">{{ selectedProject.Project }}</h3>
+			<div class="project-detail-text-div">
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Domain:</b>     {{ selectedProject.Domain }}</h5>
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Technology Used:</b>     {{ selectedProject.Tech }}</h5>
+				<h5 class="h5 text-left selectedDomain-domain-header-text">
+					<b class="project-detail-text-title">Description:</b>     {{ selectedProject.Description }}</h5>
+			</div>
+			<div class="domain-back-text-div" ng-click="setProject(null)">
+				<h4 class="h4 text-center selectedDomain-domain-header-text">
+					<i class="fa fa-arrow-left"></i> Back to Projects List</h4>
+			</div>
+		</div>
 	</div>
 </div>
