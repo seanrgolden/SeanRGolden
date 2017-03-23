@@ -51,37 +51,37 @@
    "Project": "Developed a Virtual Memory Manager",
    "Description": "Developed a Virtual Memory Manager in C to mock the functionality of a modern day MMU. This VMM included a Translation Lookaside Buffer (caching) and used standard Paging Practices.",
    "Domain": "Operating Systems",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed a Basic Process Scheduler",
    "Description": "Developed a basic process scheduler in C to emulate how CPUs handle process scheduling. This scheduler was mainly used to see how certain schedules worked better than others in given scenarios. ",
    "Domain": "Operating Systems",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed a Kernel Shell",
    "Description": "Developed a Kernel Shell in C which has the same functionality of a standard Terminal Shell on UNIX. My shell include Batch Mode functionality and would operate the same way a generic shell or command prompt.",
    "Domain": "Operating Systems",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed Kernel Modules to track Hardware Keystrokes",
    "Description": "Developed a Kernel Module in C that was able to invisibly track Hardware Keystrokes on a given machine. This Module was able to be loaded and removed safely without crashing a Linux Box.",
    "Domain": "Operating Systems",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed Program to pipe String inputs through external Executables",
    "Description": "Developed a basic program in C that was able to pipe string inputs through an external executable that would change all of the characters to Upper Case and then output. This program was used as an intro to piping and would be built upon in later projects to handle more advanced piping concepts.",
    "Domain": "Operating Systems",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed an Interpreter to parse BNF Metalanguage",
    "Description": "Developed an interpreter in C that was able to parse a BNF metalanguage that was personally created. Using Composite Patterns this interpreter could interpreter could carry out operations and allowed for computation of any basic operation.",
    "Domain": "Programming Languages",
-   "Tech": "C"
+   "Tech": "C-Language"
  },
  {
    "Project": "Developed a Program to detect Persons with High Risk of Heart Disease",
