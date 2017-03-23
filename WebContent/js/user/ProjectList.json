@@ -7,7 +7,7 @@
  },
  {
    "Project": "Developed Personal Site",
-   "Description": "Developed my Personal Website as a means to highlight and practice my Front End Development ability. Site is built using Angular-JS, CSS, HTML5, JS, and XML. The code is sourced on GitHub and my local copy includes Apache Tomcat servers and Maven Repository integration.",
+   "Description": "Developed my Personal Website as a means to highlight and practice my Front End Development. Site is built using Angular-JS, CSS, HTML5, JS, and XML. The code is sourced on GitHub and my local copy includes Apache Tomcat servers and Maven Repository integration.",
    "Domain": "Front End Development",
    "Tech": "Angular-JS, CSS, HTML5, JS, XML"
  },

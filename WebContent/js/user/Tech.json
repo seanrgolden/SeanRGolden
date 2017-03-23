@@ -3,6 +3,9 @@
 		"Name": "Android"
 	},
 	{
+		"Name": "Angular-JS"
+	},
+	{
 		"Name": "Bash"
 	},
 	{
@@ -33,6 +36,9 @@
 		"Name": "JS"
 	},
 	{
+		"Name": "NMap"
+	},
+	{
 		"Name": "PHP"
 	},
 	{
@@ -49,6 +55,9 @@
 	},
 	{
 		"Name": "VPython"
+	},
+	{
+		"Name": "WireShark"
 	},
 	{
 		"Name": "XML"
