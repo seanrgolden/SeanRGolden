@@ -785,9 +785,9 @@ body {
 	color: #f9e08e;
 	background: rgb(82, 86, 89);
 	transition: ease-in-out, .5s ease-in-out;
-	-webkit-box-shadow: 0px 0px 15px 4px rgba(255,255,255,0.8);
-	-moz-box-shadow: 0px 0px 15px 4px rgba(255,255,255,0.8);
-	box-shadow: 0px 0px 15px 4px rgba(255,255,255,0.8);
+	-webkit-box-shadow: 0px 0px 15px 4px rgba(249,224,142,0.6);
+	-moz-box-shadow: 0px 0px 15px 4px rgba(249,224,142,0.6);
+	box-shadow: 0px 0px 15px 4px rgba(249,224,142,0.6);
 }
 .choose-filter-div-all {
 	overflow: hidden;
