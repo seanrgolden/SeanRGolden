@@ -1,0 +1,28 @@
+.main-blue {
+	color: #011e41;
+	color: rgba(1,30,65,1);
+}
+.main-gray {
+	color: #867875;
+	color: rgba(134,120,117,1);
+}
+.light-blue {
+	color: #002269;
+	color: rgba(0,34,105,1);	
+}
+.lightest-blue {
+	color: #b9d9ec;
+	color: rgba(185,217,236,1);	
+}
+.light-gray {
+	color: #c6bcb6;
+	color: rgba(198,188,182,1);
+}
+.lightest-gray {
+	color: #d7d2c5;
+	color: rgba(215,210,197,1);
+}
+.yellow {
+	color: #f9e08e;
+	color: rgba(249,224,142,1);
+}

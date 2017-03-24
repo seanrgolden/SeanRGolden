@@ -199,7 +199,7 @@
  },
  {
    "Project": "Developed scripts for Proprietary Cryptography reversal attacks",
-   "Description": "Developed a number of scripts in Python that were meant to reverse the logic of proprietary cryptography. These scripts were used in a “Cyber War Game” in which the goal was to break a simple username/password protected application and obtain the “secret data”. Many applications used “obscure” self-developed cryptography which was easily reversible. By running a script on the reverse logic allowed fast attempts until a fake authentication was triggered in the executable.",
+   "Description": "Developed a number of scripts in Python that were meant to reverse the logic of proprietary cryptography. These scripts were used in a “Cyber War Game” in which the goal was to break a simple username/password protected application and obtain the “secret data”. Many applications used “obscure” self-developed cryptography which was easily reversible. Running a script on the reversed crypto logic allowed for fast attempts until a fake authentication was triggered in the executable.",
    "Domain": "Software Security",
    "Tech": "Python"
  },
